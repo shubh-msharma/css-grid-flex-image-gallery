@@ -1,9 +1,11 @@
-document.querySelector('.galary').addEventListener('click',(e)=>{
-    if(e.target.closest('.container').classList.contains("slide")){
+document.querySelector('.galary').addEventListener('click', (e) => {
+    if (e.target.closest('.container').classList.contains("slide")) {
+        e.target.closest('.container').classList.toggle('slide');
+        e.target.closest('.container').classList.toggle('setUp');
         return;
     }
     let ele = document.querySelector('.slide');
-    if(ele){
+    if (ele) {
         ele.className = "container"
     }
     e.target.closest('.container').classList.toggle('slide');
